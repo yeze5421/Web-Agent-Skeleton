@@ -14,6 +14,7 @@ def run(question: str):
 
     print(f"[2/4] 拿到 {len(search_results)} 条搜索结果")
     articles = []
+
     for i, item in enumerate(search_results, 1):
         print(f"[3/4] 抓取正文 {i}/{len(search_results)}: {item.url}")
         article = extract_article(item.url, question)
